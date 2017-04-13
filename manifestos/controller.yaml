@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ingress-nginx-status-influxdb
+  namespace: kube-system
+  labels:
+    k8s-app: ingress-nginx-status-influxdb
+    kubernetes.io/cluster-service: "true"
+    addonmanager.kubernetes.io/mode: Reconcile
+spec:
+  selector:
+    matchLabels:
+      k8s-app: ingress-nginx-status-influxdb
+  template:
+    metadata:
+      labels:
+        k8s-app: ingress-nginx-status-influxdb
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+    spec:
+      containers:
+      - name: ingress-nginx-status-influxdb
+        image: kuberstack/ingress-nginx-status-influxdb
+        resources:
+          limits:
+            cpu: 100m
+            memory: 50Mi
+          requests:
+            cpu: 100m
+            memory: 50Mi
