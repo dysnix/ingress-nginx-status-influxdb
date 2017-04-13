@@ -1,10 +1,7 @@
 ## Kubernetes Ingress-Nginx status watcher with sending status to InfluxDB
 
-Light. Simple. Fast.
-
-### Notification transports support
-
-* Slack
+Simple service for sending aggregated ingress-nginx status from all pods to InfluxDB from
+Kubernetes Heapster install (https://github.com/kubernetes/heapster/blob/master/docs/influxdb.md)
 
 ### Install
 
