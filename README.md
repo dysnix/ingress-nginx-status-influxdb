@@ -16,5 +16,5 @@ Kubernetes Heapster install (https://github.com/kubernetes/heapster/blob/master/
 #### Setup Grafana dashboard
 
   * Open your Grafana dashboard
-  * Click Home -> Import -> [Import] button
+  * Click Home -> Import -> Import button
   * Copy-Paste Json from https://raw.githubusercontent.com/kuberstack/ingress-nginx-status-influxdb/master/grafana-dashboard.json
